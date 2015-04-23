@@ -17,10 +17,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [self chant];
-    [self chant];
+    
+    NSInteger one = 1;
+    NSInteger two = 2;
+    NSInteger negativeOne = two -3;
+    NSInteger zero = one + negativeOne;
+    
+    NSLog(@"one is %ld", (long)one);
+    NSLog(@"two is %ld", (long)two);
+    NSLog(@"negativeOne is %ld", (long)negativeOne);
+    NSLog(@"zero is %ld", (long)zero);
+    
     
     return YES;
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>D9F17161-920F-43E3-A30B-109FEDB04419</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Sandbox</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>5450119CCA2DD394E9078F73A3071326A1F877FC</key>
 		<string>github.com:jlucerond/ios-exercises.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>JoesChange/Sandbox/Sandbox.xcodeproj/project.xcworkspace</string>
+	<string>JoesChange/Sandbox/Sandbox.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5450119CCA2DD394E9078F73A3071326A1F877FC</key>
