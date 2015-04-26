@@ -18,16 +18,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NSInteger one = 1;
-    NSInteger two = 2;
-    NSInteger negativeOne = two -3;
-    NSInteger zero = one + negativeOne;
+    NSInteger thirty = 30;
+    NSInteger six = 6;
+    NSInteger eight = 8;
     
-    NSLog(@"one is %ld", (long)one);
-    NSLog(@"two is %ld", (long)two);
-    NSLog(@"negativeOne is %ld", (long)negativeOne);
-    NSLog(@"zero is %ld", (long)zero);
-    
+    NSLog(@"30 / 6 has a remainder of %ld", thirty % six);
+    NSLog(@"30 / 8 has a remainder of %ld", thirty % eight);
     
     return YES;
     
