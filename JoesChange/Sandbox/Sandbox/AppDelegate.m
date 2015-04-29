@@ -18,11 +18,24 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NSInteger childHeight = -10;
-    [self checkChildHeight:childHeight];
+    NSInteger myNumber = 5;
+    NSInteger myFactorial = 1;
     
-    NSInteger secondChildHeight = 120;
-    [self checkChildHeight:secondChildHeight];
+    while (myNumber > 1) {
+        myFactorial = myFactorial * myNumber;
+        myNumber--;
+    }
+    
+    NSLog(@"%ld", (long)myFactorial);
+    
+    NSInteger mySecondNumber = 10;
+    NSInteger mySecondFactorial = 1;
+    
+    for (NSInteger i = mySecondNumber; i>1; i--){
+        mySecondFactorial = mySecondFactorial *i;
+    }
+    
+    NSLog(@"%ld", (long)mySecondFactorial);
     
     return YES;
     
