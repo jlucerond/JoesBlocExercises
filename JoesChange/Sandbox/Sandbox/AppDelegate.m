@@ -18,24 +18,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NSInteger someInt;
-    NSString *someString;
-    NSLog(@"our integer %ld", someInt);
-    NSLog(@"our string %@", someString);
+    NSInteger childHeight = -10;
+    [self checkChildHeight:childHeight];
     
-    someInt = someInt + 100;
-    NSLog(@"our int %ld", someInt);
-    
-    NSString *secondString;
-    NSMutableString *someMutableString = [secondString mutableCopy];
-    [someMutableString appendString:@"blah blah"];
-    NSLog(@"new string is %@", someMutableString);
-    
-    bool someStringExists = !secondString;
-    NSLog(@"%@", someStringExists ? @"yes" : @"no");
+    NSInteger secondChildHeight = 120;
+    [self checkChildHeight:secondChildHeight];
     
     return YES;
     
+}
+
+- (void)checkChildHeight: (NSInteger)childHeight{
+    NSInteger minHeight = 120;
+
+    NSString *message = (childHeight >= minHeight) ? @"enjoy the ride" : @"nope";
+    NSLog(@"%@", message);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
