@@ -18,24 +18,78 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NSInteger myNumber = 5;
-    NSInteger myFactorial = 1;
+//    NSArray *myToDoList = [NSArray arrayWithObjects:@"clean", @"eat", @"take out the trash", @"workout", nil];
+//    
+//    NSLog(@"I have %ld things to do today!", myToDoList.count);
+//    
+//    for (NSInteger i = 0; i < myToDoList.count; i++){
+//        NSLog(@"I need to %@", myToDoList[i]);
+//    }
     
-    while (myNumber > 1) {
-        myFactorial = myFactorial * myNumber;
-        myNumber--;
+    NSMutableArray *myMutableList = [@[@"clean", @"eat", @"take out the trash", @"workout"] mutableCopy];
+    
+//    for (NSInteger i = 0; i < myMutableList.count; i++){
+//        NSLog(@"I need to %@", myMutableList[i]);
+//    }
+//    NSLog(@" ");
+    
+    [myMutableList sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        NSString *string1 = (NSString *)obj1;
+        NSString *string2 = (NSString *)obj2;
+        
+        NSLog(@"%@", string1);
+        NSLog(@"%@", string2);
+        
+        if (string1.length > string2.length){
+            return NSOrderedAscending;
+        }
+        else if (string1.length < string2.length){
+            return NSOrderedDescending;
+        }
+        return NSOrderedSame;
+        
+    }];
+   
+    //problem for mark- why won't this work properly??
+    
+    for (NSInteger i = 0; i < myMutableList.count; i++){
+        NSLog(@"I need to %@", myMutableList[i]);
     }
     
-    NSLog(@"%ld", (long)myFactorial);
+//    NSMutableArray *myLottoNumbers = [@[@(21), @(23), @(2), @(13), @(5), @(50)] mutableCopy];
+//    NSSortDescriptor *lottoDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:true];
+//    [myLottoNumbers sortUsingDescriptors:@[lottoDescriptor]];
+//    
+//    for (NSInteger i = 0; i < myLottoNumbers.count; i++){
+//        //question for Mark- what's up with the language here, specifically, the longValue??
+//        NSLog(@"%ld", [myLottoNumbers[i] longValue]);
+//    }
     
-    NSInteger mySecondNumber = 10;
-    NSInteger mySecondFactorial = 1;
-    
-    for (NSInteger i = mySecondNumber; i>1; i--){
-        mySecondFactorial = mySecondFactorial *i;
-    }
-    
-    NSLog(@"%ld", (long)mySecondFactorial);
+//    NSMutableArray *myLottoNumbers = [@[@(21), @(23), @(2), @(13), @(5), @(50)] mutableCopy];
+//
+//    [myLottoNumbers sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+//        NSNumber *numberA = (NSNumber *)obj1;
+//        NSNumber *numberB = (NSNumber *)obj2;
+//        
+//        NSLog(@"%@", numberA);
+//        NSLog(@"%@", numberB);
+//        
+//        int intValueA = [numberA intValue];
+//        int intValueB = [numberB intValue];
+//        
+//        if (intValueA > intValueB){
+//            return NSOrderedDescending;
+//        }
+//        else if (intValueA < intValueB){
+//            return NSOrderedAscending;
+//        }
+//        return NSOrderedSame;
+//    }];
+//    
+//    for (int i = 0; i < myLottoNumbers.count; i++){
+//        //question for Mark- what's up with the language here, specifically, the longValue??
+//        NSLog(@"%ld", [myLottoNumbers[i] longValue]);
+//    }
     
     return YES;
     
