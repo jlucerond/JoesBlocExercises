@@ -18,12 +18,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NSInteger thirty = 30;
-    NSInteger six = 6;
-    NSInteger eight = 8;
+    NSInteger someInt;
+    NSString *someString;
+    NSLog(@"our integer %ld", someInt);
+    NSLog(@"our string %@", someString);
     
-    NSLog(@"30 / 6 has a remainder of %ld", thirty % six);
-    NSLog(@"30 / 8 has a remainder of %ld", thirty % eight);
+    someInt = someInt + 100;
+    NSLog(@"our int %ld", someInt);
+    
+    NSString *secondString;
+    NSMutableString *someMutableString = [secondString mutableCopy];
+    [someMutableString appendString:@"blah blah"];
+    NSLog(@"new string is %@", someMutableString);
+    
+    bool someStringExists = !secondString;
+    NSLog(@"%@", someStringExists ? @"yes" : @"no");
     
     return YES;
     
