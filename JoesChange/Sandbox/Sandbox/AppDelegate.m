@@ -18,34 +18,44 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // code begins here
     
-    NSMutableArray *myMutableTodoList = [@[@"Clean the house",
-                                           @"Feed the dog",
-                                           @"Take out the trash",
-                                           @"Fight crime"] mutableCopy];
-    NSPredicate *containsThe = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'the'"];
-    [myMutableTodoList filterUsingPredicate:containsThe];
-    for (NSString *task in myMutableTodoList) {
-        NSLog(@"Remaining task: %@", task);
+    NSArray *faveMovies = @[@"Thing", @"It", @"Nightmare On Elm Street", @"Sharknado"];
+    NSString *faveMovie = @"Monty Python And The Holy Grail";
+    NSNumber *numbMoviesWatched = @(896);
+    NSArray *faveBooks = @[@"The Count Of Monte Cristo", @"The Giver", @"Ender's Game"];
+    NSString *faveBook = @"The Catcher In The Rye";
+    NSNumber *numbBooksRead = @(724);
+    NSDictionary *faveBeliefs = @{@"Santa" : @YES,
+                                  @"Dragons" : @YES,
+                                  @"Flying Spaghetti Monster" : @YES,
+                                  @"Sasquatch" : @NO};
+    
+    NSDictionary *myFavoriteThings = @{@"FaveMovies" : faveMovies,
+                                       @"FaveMovie" : faveMovie,
+                                       @"Number of Movies Watched" : numbMoviesWatched,
+                                       @"FaveBooks" : faveBooks,
+                                       @"FaveBook" : faveBook,
+                                       @"Number of Books Read" : numbBooksRead,
+                                       @"FaveBeliefs" : faveBeliefs};
+    
+
+    NSMutableDictionary *myMutableFaveThings = [myFavoriteThings mutableCopy];
+    
+//    Why isn't this working??
+//    NSLog(@"my favorite book is %@", [myFavoriteThings [@"FaveMovie"] string]);
+    
+    [myMutableFaveThings setObject:@"Outliers" forKey:@"FaveBook"];
+    
+    id favoriteMovie = myMutableFaveThings[@"something"];
+    if (favoriteMovie != nil && [favoriteMovie isKindOfClass:[NSString class]]){
+        NSLog(@"fave movie: %@", favoriteMovie);
     }
     
-    NSString *myList = [myMutableTodoList componentsJoinedByString:@" , "];
     
-    NSArray *oppositeDirection = [myList componentsSeparatedByString:@" , "];
-    
-    
-    NSLog(@"%@", oppositeDirection);
-
     
     return YES;
     
 }
 
-- (void)checkChildHeight: (NSInteger)childHeight{
-    NSInteger minHeight = 120;
-
-    NSString *message = (childHeight >= minHeight) ? @"enjoy the ride" : @"nope";
-    NSLog(@"%@", message);
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
