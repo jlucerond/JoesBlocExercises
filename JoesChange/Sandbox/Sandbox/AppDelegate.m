@@ -18,37 +18,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // code begins here
     
-    NSArray *faveMovies = @[@"Thing", @"It", @"Nightmare On Elm Street", @"Sharknado"];
-    NSString *faveMovie = @"Monty Python And The Holy Grail";
-    NSNumber *numbMoviesWatched = @(896);
-    NSArray *faveBooks = @[@"The Count Of Monte Cristo", @"The Giver", @"Ender's Game"];
-    NSString *faveBook = @"The Catcher In The Rye";
-    NSNumber *numbBooksRead = @(724);
-    NSDictionary *faveBeliefs = @{@"Santa" : @YES,
-                                  @"Dragons" : @YES,
-                                  @"Flying Spaghetti Monster" : @YES,
-                                  @"Sasquatch" : @NO};
+    NSArray *chessBoard = @[[NSValue valueWithCGRect:CGRectMake(0, 0, 100, 100)],
+                            [NSValue valueWithCGRect:CGRectMake(100, 0, 100, 100)],
+                            [NSValue valueWithCGRect:CGRectMake(200, 0, 100, 100)],
+                            [NSValue valueWithCGRect:CGRectMake(300, 0, 100, 100)],
+                            [NSValue valueWithCGRect:CGRectMake(400, 0, 100, 100)],
+                            [NSValue valueWithCGRect:CGRectMake(500, 0, 100, 100)],
+                            [NSValue valueWithCGRect:CGRectMake(600, 0, 100, 100)],
+                            [NSValue valueWithCGRect:CGRectMake(700, 0, 100, 100)],
+                            [NSValue valueWithCGRect:CGRectMake(800, 0, 100, 100)]];
     
-    NSDictionary *myFavoriteThings = @{@"FaveMovies" : faveMovies,
-                                       @"FaveMovie" : faveMovie,
-                                       @"Number of Movies Watched" : numbMoviesWatched,
-                                       @"FaveBooks" : faveBooks,
-                                       @"FaveBook" : faveBook,
-                                       @"Number of Books Read" : numbBooksRead,
-                                       @"FaveBeliefs" : faveBeliefs};
+    CGRect firstSpace = [[chessBoard objectAtIndex:0] CGRectValue];
+                          
+    NSLog(@"%ld ", firstSpace);
     
-
-    NSMutableDictionary *myMutableFaveThings = [myFavoriteThings mutableCopy];
     
-//    Why isn't this working??
-//    NSLog(@"my favorite book is %@", [myFavoriteThings [@"FaveMovie"] string]);
-    
-    [myMutableFaveThings setObject:@"Outliers" forKey:@"FaveBook"];
-    
-    id favoriteMovie = myMutableFaveThings[@"something"];
-    if (favoriteMovie != nil && [favoriteMovie isKindOfClass:[NSString class]]){
-        NSLog(@"fave movie: %@", favoriteMovie);
-    }
     
     
     
