@@ -19,16 +19,28 @@
 
 - (NSArray *) arrayOfNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
     /* WORK HERE */
+//    NSMutableArray *myArray = [@[] mutableCopy];
+//    NSNumber *smallerNumber = (number < otherNumber) ? @(number) : @(otherNumber);
+//    NSNumber *largerNumber = (number > otherNumber) ? @(number) : @(otherNumber);
+//    
+//    NSLog(@"smaller number is %@", smallerNumber);
+//    NSLog(@"larger number is %@", largerNumber);
+//    
+//    while (smallerNumber <= largerNumber){
+//        [myArray addObject:smallerNumber];
+//        smallerNumber = @([smallerNumber integerValue] + 1);
+//    }
+    
+    
+    // FOR MARK- Apparently switching from nsnumbers (above) to nsintegers (below) fixed it. Do NSNumbers have some sort of issue with negatives. When should I use each??
+    
     NSMutableArray *myArray = [@[] mutableCopy];
-    NSNumber *smallerNumber = (number < otherNumber) ? @(number) : @(otherNumber);
-    NSNumber *largerNumber = (number > otherNumber) ? @(number) : @(otherNumber);
+    NSInteger smallerNumber = (number < otherNumber) ? number : otherNumber;
+    NSInteger largerNumber = (number > otherNumber) ? number : otherNumber;
     
-    NSLog(@"smaller number is %@", smallerNumber);
-    NSLog(@"larger number is %@", largerNumber);
-    
-    while (smallerNumber <= largerNumber){
-        [myArray addObject:smallerNumber];
-        smallerNumber = @([smallerNumber integerValue] + 1);
+    while (smallerNumber <= largerNumber) {
+        [myArray addObject: [NSNumber numberWithInteger:smallerNumber]];
+        smallerNumber++;
     }
     
     return myArray;
@@ -36,15 +48,27 @@
 
 - (NSInteger) lowestNumberInArray:(NSArray *)arrayOfNumbers {
     /* WORK HERE */
-    NSNumber *lowestInteger = @(100000000);
+//    NSNumber *lowestInteger = @(100000000);
+//    
+//    for (NSNumber *thisNumber in arrayOfNumbers) {
+//        if (thisNumber < lowestInteger){
+//            lowestInteger = thisNumber;
+//        }
+//    }
+    
+    NSInteger lowestInteger = [arrayOfNumbers[0] floatValue];
     
     for (NSNumber *thisNumber in arrayOfNumbers) {
-        if (thisNumber < lowestInteger){
-            lowestInteger = thisNumber;
+        NSInteger thisInt = [thisNumber floatValue];
+        if (thisInt < lowestInteger){
+            lowestInteger = thisInt;
         }
     }
     
-    return [lowestInteger integerValue];
+    
+    
+    
+    return lowestInteger;
 }
 
 @end
