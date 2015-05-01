@@ -27,7 +27,7 @@
 
 - (NSMutableArray *) arrayYouShouldRemember {
     /* WORK HERE */
-    return [self.array1Strong mutableCopy];
+    return self.array1Strong;
 }
 
 - (NSMutableArray *) arrayYouShouldCopy {
