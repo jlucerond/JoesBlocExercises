@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "JLCar.h"
 
 @interface AppDelegate ()
 
@@ -18,23 +19,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // code begins here
     
-    NSArray *chessBoard = @[[NSValue valueWithCGRect:CGRectMake(0, 0, 100, 100)],
-                            [NSValue valueWithCGRect:CGRectMake(100, 0, 100, 100)],
-                            [NSValue valueWithCGRect:CGRectMake(200, 0, 100, 100)],
-                            [NSValue valueWithCGRect:CGRectMake(300, 0, 100, 100)],
-                            [NSValue valueWithCGRect:CGRectMake(400, 0, 100, 100)],
-                            [NSValue valueWithCGRect:CGRectMake(500, 0, 100, 100)],
-                            [NSValue valueWithCGRect:CGRectMake(600, 0, 100, 100)],
-                            [NSValue valueWithCGRect:CGRectMake(700, 0, 100, 100)],
-                            [NSValue valueWithCGRect:CGRectMake(800, 0, 100, 100)]];
     
-    CGRect firstSpace = [[chessBoard objectAtIndex:0] CGRectValue];
-                          
-    NSLog(@"%ld ", firstSpace);
+    JLCar *newCar = [JLCar new];
     
+    [newCar honk];
     
+    newCar.hornSound = @"HOOOOONK";
     
-    
+    [newCar honk];
     
     return YES;
     

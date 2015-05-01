@@ -14,6 +14,7 @@
 		D8287A8C1AE7EC42000B3D4D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8287A8B1AE7EC42000B3D4D /* Images.xcassets */; };
 		D8287A8F1AE7EC42000B3D4D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8287A8D1AE7EC42000B3D4D /* LaunchScreen.xib */; };
 		D8287A9B1AE7EC42000B3D4D /* SandboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8287A9A1AE7EC42000B3D4D /* SandboxTests.m */; };
+		D85DBD491AF3DB870000B237 /* JLCar.m in Sources */ = {isa = PBXBuildFile; fileRef = D85DBD481AF3DB870000B237 /* JLCar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		D8287A941AE7EC42000B3D4D /* SandboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SandboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8287A991AE7EC42000B3D4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8287A9A1AE7EC42000B3D4D /* SandboxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandboxTests.m; sourceTree = "<group>"; };
+		D85DBD471AF3DB870000B237 /* JLCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLCar.h; sourceTree = "<group>"; };
+		D85DBD481AF3DB870000B237 /* JLCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLCar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 			children = (
 				D8287A821AE7EC42000B3D4D /* AppDelegate.h */,
 				D8287A831AE7EC42000B3D4D /* AppDelegate.m */,
+				D85DBD471AF3DB870000B237 /* JLCar.h */,
+				D85DBD481AF3DB870000B237 /* JLCar.m */,
 				D8287A851AE7EC42000B3D4D /* ViewController.h */,
 				D8287A861AE7EC42000B3D4D /* ViewController.m */,
 				D8287A881AE7EC42000B3D4D /* Main.storyboard */,
@@ -221,6 +226,7 @@
 			files = (
 				D8287A871AE7EC42000B3D4D /* ViewController.m in Sources */,
 				D8287A841AE7EC42000B3D4D /* AppDelegate.m in Sources */,
+				D85DBD491AF3DB870000B237 /* JLCar.m in Sources */,
 				D8287A811AE7EC42000B3D4D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +422,7 @@
 				D8287AA01AE7EC42000B3D4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8287AA11AE7EC42000B3D4D /* Build configuration list for PBXNativeTarget "SandboxTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				D8287AA31AE7EC42000B3D4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
