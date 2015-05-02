@@ -1,7 +1,5 @@
 import UIKit
 
-// making a change in something for GitHub practicing purposes
-
 /*
 
 Strings
@@ -10,10 +8,16 @@ Strings
 
 func favoriteCheeseStringWithCheese(cheese: String) -> String {
     // WORK HERE
-    return cheese
+    
+    let myFavoriteCheese = cheese + " cheese"
+    
+    return myFavoriteCheese
 }
 
-let fullSentence = favoriteCheeseStringWithCheese("cheddar")
+var myFave = favoriteCheeseStringWithCheese("cheddar")
+
+let fullSentence = "my favorite cheese is " + favoriteCheeseStringWithCheese("cheddar").stringByReplacingOccurrencesOfString(" cheese", withString: "")
+
 // Make fullSentence say "My favorite cheese is cheddar."
 
 /*
@@ -22,13 +26,17 @@ Arrays & Dictionaries
 
 */
 
-let numberArray = [1, 2, 3, 4]
+var numberArray = [1, 2, 3, 4]
 // Add 5 to this array
 // WORK HERE
+numberArray.append(5)
 
-let numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
+var numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
 // Add 5 : "five" to this dictionary
 // WORK HERE
+numberDictionary[5] = "five"
+
+println(numberDictionary)
 
 /*
 
